@@ -5452,4 +5452,3 @@ Hooks.once("ready", async () => {
 Hooks.once("devModeReady", ({ registerPackageDebugFlag }) => {
   registerPackageDebugFlag(CONSTANTS.MODULE_ID);
 });
-//# sourceMappingURL=module.js.map
