@@ -11,7 +11,7 @@ p4535992, samulopez and Shr1mps) with fixes for Foundry VTT v14. See [CHANGELOG.
 In Foundry: **Add-on Modules → Install Module**, paste this into **Manifest URL**, then **Install**:
 
 ```
-https://github.com/MrJamela/foundryvtt-pointer/releases/latest/download/module.json
+https://github.com/MrJamela/pointer/releases/latest/download/module.json
 ```
 
 It replaces the original module (same id, `pointer`). No other modules are needed.
