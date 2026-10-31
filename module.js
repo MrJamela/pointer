@@ -5349,7 +5349,7 @@ const _PointerManager = class _PointerManager {
         force: data.force,
         scale: data.scale
       });
-      canvas.animatePan({ x: data.position.x, y: data.position.y, scale: data.scale });
+      if (data.force) canvas.animatePan({ x: data.position.x, y: data.position.y, scale: data.scale });
     }
   }
   start() {
