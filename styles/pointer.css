@@ -43,7 +43,7 @@
 }
 .pointer-settings .pointer-info {
     font-weight: 900;
-    font-family: "Font Awesome 6 Pro";
+    font-family: var(--font-awesome, "Font Awesome 7 Pro");
     position: relative;
     top: -0.4em;
     -webkit-font-smoothing: antialiased;
@@ -87,7 +87,7 @@
 }
 .pointer-settings .form-checkbox-group input[type="checkbox"] + label:before {
     font-weight: 400;
-    font-family: "Font Awesome 6 Pro";
+    font-family: var(--font-awesome, "Font Awesome 7 Pro");
     padding: 0 0.3em;
     content: "\f0c8";
 }
@@ -116,7 +116,7 @@
 }
 .pointer-settings .chooser-checkbox input[type="checkbox"] + a:before {
     font-weight: 400;
-    font-family: "Font Awesome 6 Pro";
+    font-family: var(--font-awesome, "Font Awesome 7 Pro");
     padding: 0 0.3em;
     content: "\f0c8";
 }
@@ -182,7 +182,7 @@
 }
 .pointer-settings .chooser-tab.active .chooser .add-pointer:before {
     content: "\f067";
-    font-family: "Font Awesome 6 Pro";
+    font-family: var(--font-awesome, "Font Awesome 7 Pro");
     font-weight: 900;
 }
 .pointer-settings .chooser-tab.active .chooser .delete-pointer {
@@ -191,7 +191,7 @@
 .pointer-settings .chooser-tab.active .chooser .delete-pointer:before {
     font-size: 0.8em;
     content: "\f1f8";
-    font-family: "Font Awesome 6 Pro";
+    font-family: var(--font-awesome, "Font Awesome 7 Pro");
     font-weight: 900;
 }
 .pointer-settings .chooser-tab.active .chooser .header .delete-pointer:before {
@@ -225,4 +225,9 @@
     background: black;
     margin: 0 0 10px 0;
     font-size: 0.8em;
+}
+/* Foundry v14 lets the value box grow as wide as the slider, which pushed the tick marks onto the numbers:
+   keep it to the 58px the tick row is measured against. */
+.pointer-settings .form-fields .range-value {
+    flex: 0 0 58px;
 }

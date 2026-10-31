@@ -4333,7 +4333,7 @@ function getKey(event) {
     return event.code;
   if (/^Digit/.test(event.code))
     return event.code[5];
-  if (event.location === 3 && (event.code in game.keyboard.moveKeys || event.code in game.keyboard.zoomKeys)) {
+  if (event.location === 3 && (game.keyboard.moveKeys?.has?.(event.code) || game.keyboard.zoomKeys?.has?.(event.code))) {
     return event.code;
   }
   return event.key;
@@ -4395,9 +4395,9 @@ function removeListeners() {
   }
   if (controls.force.event) {
     if (controls.force.event === "key") {
-      window.removeEventListener(`${controls.ping.event}down`, onForcePing);
+      window.removeEventListener(`${controls.force.event}down`, onForcePing);
     } else {
-      window.removeEventListener(`${controls.ping.event}down`, onForcePing);
+      window.removeEventListener(`${controls.force.event}down`, onForcePing);
     }
   }
 }
@@ -4417,9 +4417,9 @@ function addListeners() {
   }
   if (controls.force.event) {
     if (controls.force.event === "key") {
-      window.addEventListener(`${controls.ping.event}down`, onForcePing);
+      window.addEventListener(`${controls.force.event}down`, onForcePing);
     } else {
-      window.addEventListener(`${controls.ping.event}down`, onForcePing);
+      window.addEventListener(`${controls.force.event}down`, onForcePing);
     }
   }
 }
@@ -5126,7 +5126,7 @@ __publicField(_PointerSettingsMenu, "DEFAULT_OPTIONS", {
   pixiOptions: {
     width: 300,
     height: 300,
-    transparent: true,
+    backgroundAlpha: 0,
     sharedTicker: true,
     sharedLoader: true
   },
